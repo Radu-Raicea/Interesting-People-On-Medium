@@ -1,6 +1,8 @@
 
 import requests
 import json
+import csv
+from datetime import datetime
 
 
 # Removes the extra characters that get returned with every JSON request on Medium endpoints
@@ -106,6 +108,14 @@ def get_usernames(user_ids):
     return usernames
 
 
+# Adds list of recommended users to the recommended_users.csv and adds a timestamp
+def list_to_csv(recommended_users_list):
+    with open('recommended_users.csv', 'a') as file:
+        writer = csv.writer(file)
+        recommended_users_list.insert(0, datetime.now().strftime('%Y-%m-%d %H:%M:%S'))
+        writer.writerow(recommended_users_list)
+
+
 # Returns a list of usernames in your network that might be interesting to interact with
 def get_recommended_users(username, recommend_min):
 
@@ -122,4 +132,6 @@ def get_recommended_users(username, recommend_min):
     return get_usernames(users)
 
 
-print(get_recommended_users('Radu_Raicea', 5))
+recommended_users = get_recommended_users('Radu_Raicea', 5)
+print(recommended_users)
+list_to_csv(recommended_users)
