@@ -8,9 +8,9 @@ Install the package
 
     sudo pip install requests
 
-Modify line 125 in `scraper.py` to put your username and the minimum number of recommendations on the response
+Modify line 178 in `scraper.py` to put your username and the minimum number of recommendations on the response
 
-    print(get_recommended_users('Radu_Raicea', 5))
+    interesting_users = get_interesting_users('Radu_Raicea', 10)
 
 Run the scraper
 
