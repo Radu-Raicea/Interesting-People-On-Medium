@@ -160,7 +160,7 @@ def list_to_csv(interesting_users_list):
 # Returns a list of usernames in your network that might be interesting to interact with
 def get_interesting_users(username, recommend_min):
 
-    print('Scraping for interesting users for %s...' % username)
+    print('Looking for interesting users for %s...' % username)
 
     user_id = get_user_id(username)
 
