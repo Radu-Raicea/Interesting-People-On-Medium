@@ -10,7 +10,7 @@ MEDIUM = 'https://medium.com'
 
 # Removes the extra characters that get returned with every JSON request on Medium endpoints
 def clean_json_response(response):
-    return json.loads(response.text.split('])}while(1);</x>')[1])
+    return json.loads(response.text.replace('])}while(1);</x>', '', 1))
 
 
 # Returns the User ID of a Medium Username
