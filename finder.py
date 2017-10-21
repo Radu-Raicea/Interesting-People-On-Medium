@@ -1,6 +1,7 @@
 
 import requests
 import json
+import click
 import csv
 from datetime import datetime, timedelta
 from time import sleep
@@ -174,7 +175,13 @@ def get_interesting_users(username, recommend_min):
 
     return get_usernames(users)
 
+@click.command()
+@click.option('-n', '--name', default='Radu_Raicea', help='Your username on Medium')
+@click.option('-r', '--min-recommendations', default=10, help='Minimum numbers of recommendations on the response')
+def main(name, min_recommendations):
+    interesting_users = get_interesting_users(name, min_recommendations)
+    print(interesting_users)
+    list_to_csv(interesting_users)
 
-interesting_users = get_interesting_users('Radu_Raicea', 10)
-print(interesting_users)
-list_to_csv(interesting_users)
+if __name__ == '__main__':
+    main()

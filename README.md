@@ -8,12 +8,12 @@ As seen on [Medium](https://medium.freecodecamp.org/how-i-used-python-to-find-in
 
 Install the package
 
-    sudo pip install requests
+    sudo pip install requests click
 
-Modify line 178 in `finder.py` to put your username and the minimum number of recommendations on the response
+Checkout how to use the script
 
-    interesting_users = get_interesting_users('Radu_Raicea', 10)
+    python finder.py --help
 
-Run the finder
+Example
 
-    python finder.py
+    python finder.py --name 'Radu_Raicea' --min-recommendations 10
