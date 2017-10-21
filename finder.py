@@ -175,9 +175,10 @@ def get_interesting_users(username, recommend_min):
 
     return get_usernames(users)
 
+
 @click.command()
-@click.option('-n', '--name', default='Radu_Raicea', help='Your username on Medium')
-@click.option('-r', '--min-recommendations', default=10, help='Minimum numbers of recommendations on the response')
+@click.option('-n', '--name', default='Radu_Raicea', help='Medium username')
+@click.option('-r', '--min-recommendations', default=10, help='Minimum number of recommendations per response')
 def main(name, min_recommendations):
     interesting_users = get_interesting_users(name, min_recommendations)
     print(interesting_users)

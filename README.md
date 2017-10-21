@@ -10,10 +10,10 @@ Install the package
 
     sudo pip install requests click
 
-Checkout how to use the script
+Checking how to use the script
 
     python finder.py --help
 
 Example
 
-    python finder.py --name 'Radu_Raicea' --min-recommendations 10
+    python finder.py --name Radu_Raicea --min-recommendations 10
