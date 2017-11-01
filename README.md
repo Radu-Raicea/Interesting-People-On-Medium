@@ -6,7 +6,7 @@ As seen on [Medium](https://medium.freecodecamp.org/how-i-used-python-to-find-in
 
 ## Instructions
 
-Install the package
+Install the packages
 
     sudo pip install requests click
 
