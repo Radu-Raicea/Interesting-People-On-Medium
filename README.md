@@ -1,4 +1,6 @@
-# Interesting People on Medium
+<p align="center">
+    <img src="medium_logo.png" alt="logo" width="950px">
+</p>
 
 Python script that finds interesting users from your network to interact with. More specifically, it searches the latest posts of all the users you are following, looks through the responses of those posts and picks out the best ones. The purpose of this script is to find active users that have interacted with your network and have had a positive response from the community (over a certain number of recommendations on their response).
 
